@@ -16,11 +16,11 @@ app.set("views", "views"); // views ichida html backendni yasaymiz
 app.set('view engine', 'ejs');
 
 //4 Routing code
-app.get("/", function(req, res) {
+app.get("/hello", function(req, res) {
     res.end(`<h1 style="background: red">HELLO WORLD by Habibullo</h1>`);
 });
 
-app.get("/", function(req, res) {
+app.get("/gift", function(req, res) {
     res.end(`<h1>Siz sovg'alar sahifasidasiz</h1>`);
 });
 
