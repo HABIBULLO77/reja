@@ -22,11 +22,13 @@ function maslahatBering(a, callback) {
     else if(a > 40 && a <= 50) callback(null, list[3]);
     else if(a > 50 && a <= 60) callback(null, list[4]);
     else {
-        callback(null, list[5]);
+        setTimeout(function() {
+            callback(null, list[5]);
+        }, 5000);
     }
 }
 console.log('passed here 0');
-maslahatBering(10, (err, data) => {
+maslahatBering(65, (err, data) => {
     if(err) console.log('ERROR:', err);
     console.log('javob:', data);
 });
