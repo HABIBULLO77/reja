@@ -1,17 +1,34 @@
 console.log("TRAIN AREA");
 
+/*B-TASK: 
+
+Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+*/
+function countDigits(str) {
+    let count = 0
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] >= '0' && str[i] <= '9') {
+            count++
+        }
+    }
+    return count;
+}
+
+const result = countDigits("ad2a54y79wet0sfgb9");
+console.log("Result: ", result);
 // NodeJs event loop va Callback functionlarni o'rganamiz
 
-console.log("Jack Ma Maslahaltlari!");
+// console.log("Jack Ma Maslahaltlari!");
 
-const list = [
-  "yaxshi talaba bo'ling!", // 0 - 20
-  "to'g'ri boshliq tanlang va ko'proq xato qiling!", // 20 - 30
-  "o'zingizga ishlashzni boshlang!", // 30 - 40
-  "siz kuchli bo'lgan narsalarni qiling!", // 40 - 50
-  "yoshlarga investitsiya qiling!", // 50 - 60
-  "endi dam oling, foydasi yo'q endi", // 60 
-];
+// const list = [
+//   "yaxshi talaba bo'ling!", // 0 - 20
+//   "to'g'ri boshliq tanlang va ko'proq xato qiling!", // 20 - 30
+//   "o'zingizga ishlashzni boshlang!", // 30 - 40
+//   "siz kuchli bo'lgan narsalarni qiling!", // 40 - 50
+//   "yoshlarga investitsiya qiling!", // 50 - 60
+//   "endi dam oling, foydasi yo'q endi", // 60 
+// ];
 
 // CALLBACK FUNCTION
 // function maslahatBering(a, callback) {
@@ -85,14 +102,14 @@ const list = [
 Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
 MASALAN countLetter("e", "engineer") 3ni return qiladi.
 */
-function countLetter(letter, word) {
-    let count = 0;
-    for (let i = 0; i < word.length; i++) {
-        if (word[i] === letter) {
-            count++;
-        }
-    }
-    return count;
-} 
-const result = countLetter("e", "engineer");
-console.log(result);
+// function countLetter(letter, word) {
+//     let count = 0;
+//     for (let i = 0; i < word.length; i++) {
+//         if (word[i] === letter) {
+//             count++;
+//         }
+//     }
+//     return count;
+// } 
+// const result = countLetter("e", "engineer");
+// console.log(result);
