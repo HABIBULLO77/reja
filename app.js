@@ -2,6 +2,7 @@ console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -37,6 +38,15 @@ app.post("/create-item", (req, res) => {
 	});
 });
 
+app.post("/delete-item", (req, res) => {
+	const id = req.body.id;
+	db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, 
+	function(err, data) {
+		res.json({state: "success"});
+	}
+);
+});
+
 app.get("/author", (req, res) => {
 	res.render("author", { user: user });
 });
@@ -50,7 +60,7 @@ app.get("/", function (req, res) {
 		  console.log(err);
 		  res.end("something went wrong");
 		} else {
-			console.log(data);
+			//console.log(data);
 		  	res.render("reja", { items: data });
 		}
 	  });
