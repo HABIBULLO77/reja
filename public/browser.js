@@ -68,7 +68,7 @@ document.addEventListener("click", function (e) {
             .then((response) => {
                 e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
             }).catch((err) => {
-
+                console.log("Iltimos qaytadan harakat qiling!");
             })
         }
     }
@@ -77,6 +77,8 @@ document.addEventListener("click", function (e) {
 document.getElementById("clean-all").addEventListener("click", function() {
     axios.post("/delete-all",  {delete_all: true}).then((response) => {
         alert(response.data.state);
-        document.location.reload();
+        document.getElementById("item-list").innerHTML = "";
+        }).catch((err) => {
+            console.log(err);
     });
 });
