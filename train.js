@@ -1,22 +1,20 @@
 console.log("TRAIN AREA");
 
 /*
-  D-TASK: 
+  E-TASK: 
 
-  Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
-   MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+    Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+    MASALAN: getReverse("hello") return qilsin "olleh"
+
 */
 
-function checkContent(str1, str2) {
-    if (str1.length !== str2.length) {
-        return false;
+function getReverse(str) {
+    let reverse = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+        
     }
-
-    const sorted1 = str1.split('').sort().join('');
-    const sorted2 = str2.split('').sort().join('');
-
-    return sorted1 === sorted2;
+    return reverse;
 }
-
-test = checkContent("mitgroup", "gmtiprou");
-console.log(test); 
+result = getReverse("hello");
+console.log(result);
