@@ -9,7 +9,7 @@ MASALAN: findDoublers("hello") return true return qiladi
 */
 
 function findDoublers(str) {
-    let arr = str.split('');
+    let arr = str.split('').sort();
     let arr2 = [];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] == arr[i + 1]) {
@@ -23,9 +23,9 @@ function findDoublers(str) {
             return false;
     }
 }
-console.log(findDoublers("hello"));
+console.log(findDoublers("helol"));
 
-// the second method
+
 
 // function findDoublers(str) {
 //     const sortedStr = str.split('').sort().join('');
@@ -38,3 +38,5 @@ console.log(findDoublers("hello"));
 
 //     return false;
 // }
+
+// console.log(findDoublers("helol"))
