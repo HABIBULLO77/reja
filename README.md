@@ -1,2 +1,2 @@
 ### This is REJA(ToDoList) project
-##using EJS, NodeJS, ExpressJS
+## using EJS, NodeJS, ExpressJS
